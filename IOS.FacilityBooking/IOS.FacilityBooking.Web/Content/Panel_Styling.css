@@ -1,0 +1,178 @@
+﻿/* Error Panel */
+
+#errorPanel {
+	text-align: center;
+	margin-top: 10px;
+	font-size: 13px;
+	color: red;
+}
+
+/* General Panel */
+
+#registerPanel , #homePanel , #basicSearchPanel , #advanceSearchPanel , #changePasswordPanel{
+    position: Relative;
+	left: 5px;
+	top: 5px;
+	width: 988px;
+	height: 590px;
+	border: 1px solid #6ec2ca;
+	-moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+#registerPanel , #basicSearchPanel , #advanceSearchPanel ,
+#changePasswordPanel , #termsNconditions {
+	display: none;
+}
+
+#registerPanel_header , #homePanel_header , #advanceSearchPanel_header ,
+#basicSearchPanel_header , #changePasswordPanel_header {
+    text-transform:uppercase;	    
+    text-align:left;
+    background-color:#f0f0f0;
+    color:#666362;
+	font-size:16px;
+	text-shadow: 1px 1px 1px #fff;
+	font-weight:bold;
+	padding:5px 5px 5px 5px;
+	margin:10px 0px;
+	border-bottom:1px solid #fff;
+    border-top:1px solid #d9d9d9;
+}
+
+#registerPanel_body , #homePanel_body , #advanceSearchPanel_body , 
+#basicSearchPanel_body , #changePasswordPanel_body {
+	margin:5px 0px;
+	background-color:#f4f4f4;
+	border:1px solid #fff;
+	width: 97%;
+	height: 515px;
+	padding: 5px;
+	margin-left: 1%;
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-box-shadow:0px 0px 3px #aaa;
+    -webkit-box-shadow:0px 0px 3px #aaa;
+    box-shadow:0px 0px 3px #aaa;   
+}
+
+/* Register Panel */
+
+#registerTable {
+	position: relative;
+	width: 950px;
+	border: none;
+}
+
+	#registerTable .registerTablelabel {
+		width: 200px;
+		text-align: left;
+		color: rgb(64, 92, 96);
+	}
+
+	#registerTable p {
+		float: left;
+		padding-left: 5px;
+		color: #EE2C2C;
+	}
+
+#showtermsNconditions {
+	cursor: pointer;
+	color: #0099CC;
+	text-decoration: underline;
+}
+
+#registerAgree, #registerAgreeLabel {
+	margin-top: 10px;
+	margin-left: 10px;
+	display: inline-block;
+	font-size: 15px;	
+}
+
+#registerAgree {
+	margin-left: 15px;
+}
+
+#registerAgreeLabel {
+	margin-left: 5px;
+}
+
+/* Change Password Panel */
+
+#changePasswordTable {
+	position: relative;
+	width: 950px;
+	border: none;
+}
+
+	#changePasswordTable .changePasswordTablelabel {
+		width: 200px;
+		text-align: left;
+		color: rgb(64, 92, 96);
+	}
+
+	#changePasswordTable p {
+		float: left;
+		padding-left: 5px;
+		color: #EE2C2C;
+	}
+
+/* Basic Search Panel */
+
+#basicSearchTable {
+	width: 950px;
+	border: none;
+}
+
+	#basicSearchTable .basicSearchLabel {
+		width: 250px;
+		text-align: left;
+		color: rgb(64, 92, 96);
+	}
+
+	#basicSearchTable #basicSearchError {
+		width: 250px;
+		color: red;
+		visibility: hidden;
+	}
+
+	#basicSearchTable #basicSearchView {
+		border: 1px solid green;
+		width: 700px;
+	}
+
+	#basicSearchTable #basicAdditionalSpace {
+		width: 250px;
+		height: 255px;
+	}
+
+/* Advance Search Panel */
+
+#advanceSearchTable {
+	width: 950px;
+	border: none;
+}
+
+	#advanceSearchTable .advanceSearchLabel {
+		width: 250px;
+		text-align: left;
+		color: rgb(64, 92, 96);
+	}
+
+	#advanceSearchTable #advanceSearchError {
+		width: 250px;
+		color: red;
+		visibility: hidden;
+	}
+
+	#advanceSearchTable #advanceSearchView {
+		border: 1px solid green;
+		width: 700px;
+	}
+
+	#advanceSearchTable #advanceAdditionalSpace {
+		width: 250px;
+		height: 195px;
+	}

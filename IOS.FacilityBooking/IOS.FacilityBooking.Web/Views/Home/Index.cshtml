@@ -1,4 +1,40 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿@model IOS.FacilityBooking.Web.Models.LoginModel
+@{
+    ViewBag.Title = "iOneSoftSolutions";
 }
-@Html.ActionLink("Facility Booking", "Index", "FacilityBooking");
+@functions{
+    public string GetAntiForgeryToken()
+    {
+        string cookieToken, formToken;
+        AntiForgery.GetTokens(null, out cookieToken, out formToken);
+        return cookieToken + ":" + formToken;                
+    }
+}
+
+<div id="main-content">
+
+	<div id="homePanel">
+		@Html.Partial("_HomePartial")
+	</div>
+	<div id="registerPanel">
+        @Html.Partial("_RegisterPartial")
+    </div>
+	<div id="basicSearchPanel">
+		@Html.Partial("_BasicSearchPartial")
+	</div>
+	<div id="advanceSearchPanel">
+		@Html.Partial("_AdvanceSearchPartial")
+	</div>
+	<div id="changePasswordPanel">
+		@Html.Partial("_ChangePasswordPartial")
+	</div>
+
+</div>
+
+@if (@User.Identity.IsAuthenticated)
+{
+    @section scripts {
+        @Scripts.Render("~/bundles/knockout")
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+}

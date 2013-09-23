@@ -1,0 +1,111 @@
+﻿@model IOS.FacilityBooking.Web.Models.AdvanceSearchModel
+
+@using (Html.BeginForm("JsonAdvanceSearch", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { Id = "advanceSearchForm" }))
+{
+    @Html.AntiForgeryToken()
+
+	<div id="advanceSearchPanel_header">
+		<h2>Advance Search</h2>
+	</div>
+	
+	<div id="advanceSearchPanel_body">
+		<table id="advanceSearchTable">
+			<tr>
+				<td class="advanceSearchLabel">@Html.LabelFor(m => m.StartDate)</td>
+				<td id="advanceSearchView" rowspan="11"></td>
+			</tr>
+			<tr>
+				<td>@Html.TextBoxFor(m => m.StartDate , new { id = "startDatePicker" , @class = "advanceSearchTextBox", autocomplete="off", placeholder="eg. 25/12/2013 (DD/MM/YY)"})</td>
+			</tr>
+			<tr>
+				<td class="advanceSearchLabel">@Html.LabelFor(m => m.EndDate)</td>
+			</tr>
+			<tr>
+				<td>@Html.TextBoxFor(m => m.EndDate , new { id = "endDatePicker" , @class = "advanceSearchTextBox", autocomplete="off", placeholder="eg. 25/12/2013 (DD/MM/YY)"})</td>
+			</tr>
+			<tr>
+				<td class="advanceSearchLabel">@Html.LabelFor(m => m.StartTimehours)</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="Hours">
+						<select name="StartTimehours">
+							<option value="01">01</option>
+							<option value="02">02</option>
+							<option value="03">03</option>
+							<option value="04">04</option>
+							<option value="05">05</option>
+							<option selected="selected" value="06">06</option>
+							<option value="07">07</option>
+							<option value="08">08</option>
+							<option value="09">09</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+						</select>
+					</div>
+					<div class="Minutes">
+						<select name="StartTimeminutes">
+							<option selected="selected" value="00">00</option>
+							<option value="15">15</option>
+							<option value="30">30</option>
+							<option value="45">45</option>
+						</select>
+					</div>
+					<div class="AMPM">
+						<select name="StartTimeAMPM">
+							<option value="AM">AM</option>
+							<option selected="selected" value="PM">PM</option>
+						</select>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td class="advanceSearchLabel">@Html.LabelFor(m => m.EndTimehours)</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="Hours">
+						<select name="EndTimehours" id="EndTimehours">
+							<option value="01">01</option>
+							<option value="02">02</option>
+							<option value="03">03</option>
+							<option value="04">04</option>
+							<option value="05">05</option>
+							<option value="06">06</option>
+							<option selected="selected" value="07">07</option>
+							<option value="08">08</option>
+							<option value="09">09</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+						</select>
+					</div>
+					<div class="Minutes">
+						<select name="EndTimeminutes" id="EndTimeminutes">
+							<option selected="selected" value="00">00</option>
+							<option value="15">15</option>
+							<option value="30">30</option>
+							<option value="45">45</option>
+						</select>
+					</div>
+					<div class="AMPM">
+						<select name="EndTimeAMPM" id="EndTimeAMPM">
+							<option value="AM">AM</option>
+							<option selected="selected" value="PM">PM</option>
+						</select>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td><input id="advanceSearchButton" type="submit" value="Search Now" /></td>
+			</tr>
+			<tr>
+				<td id="advanceSearchError"><label>Invalid Format of Date. [DD/MM/YY]</label></td>
+			</tr>
+			<tr>
+				<td id="advanceAdditionalSpace"></td>
+			</tr>
+		</table>
+	</div>
+}

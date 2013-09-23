@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace IOS.FacilityBooking.Web
+namespace IOS
 {
     public class FilterConfig
     {

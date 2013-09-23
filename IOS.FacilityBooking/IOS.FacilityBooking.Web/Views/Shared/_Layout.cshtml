@@ -1,48 +1,122 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>@ViewBag.Title - My ASP.NET MVC Application</title>
-        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-        <meta name="viewport" content="width=device-width" />
-        @Styles.Render("~/Content/css")
-        @Scripts.Render("~/bundles/modernizr")
-    </head>
-    <body>
-        <header>
-            <div class="content-wrapper">
-                <div class="float-left">
-                    <p class="site-title">@Html.ActionLink("your logo here", "Index", "Home")</p>
-                </div>
-                <div class="float-right">
-                    <section id="login">
-                       Hello, <span class="username">@User.Identity.Name</span>!
-                    </section>
-                    <nav>
-                        <ul id="menu">
-                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                            <li>@Html.ActionLink("About", "About", "Home")</li>
-                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </header>
-        <div id="body">
-            @RenderSection("featured", required: false)
-            <section class="content-wrapper main-content clear-fix">
-                @RenderBody()
-            </section>
-        </div>
-        <footer>
-            <div class="content-wrapper">
-                <div class="float-left">
-                    <p>&copy; @DateTime.Now.Year - My ASP.NET MVC Application</p>
-                </div>
-            </div>
-        </footer>
+﻿@model IOS.FacilityBooking.Web.Models.LoginModel
 
-        @Scripts.Render("~/bundles/jquery")
-        @RenderSection("scripts", required: false)
-    </body>
+@functions{
+    public string GetAntiForgeryToken()
+    {
+        string cookieToken, formToken;
+        AntiForgery.GetTokens(null, out cookieToken, out formToken);
+        return cookieToken + ":" + formToken;                
+    }
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - eRoom Booking</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+	@Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+	<script type='text/javascript'>
+		window.onload = startclock;
+		var clock;
+		var time_diff;
+		function startclock() {
+			clock = document.getElementById('live_clock');
+			server_time = new Date();
+			time_diff = new Date() - server_time;
+			setInterval('live_clock()', 1000);
+		}
+	</script>
+</head>
+
+
+
+<body>
+	<div id="main_container">
+		<div id="header">
+			<div class="header_container">
+				<h1>
+					iOneSoftSolutions (Put any logo here or image)
+				</h1>
+			</div>
+		</div>
+
+		<div id="seprater"></div>
+
+		<div id="left_column">
+			<div id="live_clock_container">
+				<div id="live_clock">00:00:00 AM Mon, 00 Jan 0000</div>
+			</div>
+			@if (!@User.Identity.IsAuthenticated)
+			{
+				<div>
+				@using (Html.BeginForm("JsonLogin", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { id = "loginForm" }))
+				{
+					@Html.AntiForgeryToken()
+					<div id="loginPanel">	
+						<ul id="loginListView">
+							<li>Login Here</li>
+							<li>@Html.LabelFor(m => m.UserName)</li>
+							<li>@Html.TextBoxFor(m => m.UserName, new { autofocus = "autofocus", id = "loginName" })</li>
+							@Html.ValidationMessageFor(m => m.UserName)
+							<li>@Html.LabelFor(m => m.Password)</li>
+							<li>@Html.PasswordFor(m => m.Password , new { id="loginPass"})</li>
+							@Html.ValidationMessageFor(m => m.Password)
+							<li>@Html.LabelFor(m => m.RememberMe, new { @class="checkbox"}) @Html.CheckBoxFor(m => m.RememberMe)</li>
+							<li><input id="loginButton"type="submit" value="Login" /></li>
+							<li id="signup"><p>Not A Member yet? <a id="showRegister">SignUp</a></p></li>
+						</ul>
+					</div>
+					<div id="errorPanel">
+						@Html.ValidationSummary() 
+					</div>
+				}
+				</div>
+			}
+			else
+			{
+				
+				<div id="afterLoginPanel">
+					<ul id="afterLoginListView">
+						<li>Hello, @User.Identity.Name</li>
+							@using (Html.BeginForm("LogOff", "Account", new { area = "" }, FormMethod.Post, new { id = "logoutForm" }))
+							{
+								@Html.AntiForgeryToken()
+								<li id="showLogOff">Log off</li>
+							}	
+						<li id="showChangePassword">Change Password</li>
+					</ul>
+				</div>
+
+				<div id="mainMenuPanel">
+					<ul id="mainMenuListView">
+						<li>Menu</li>
+						<li id="showHome">Rooms</li>
+						<li id="showBasicSearch">Air-Conditioners</li>
+						<li id="showAdvanceSearch">Cars</li>
+					</ul>
+				</div>
+			}
+		</div>
+
+		<div id="main_content">
+			<div id="content_display">
+				@RenderBody()
+			</div>
+		</div>
+		
+		<div id="footer">
+			<h6>FOOTER</h6>
+        
+        
+		</div>
+		
+	</div>
+    
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/javascript")
+    @RenderSection("scripts", required: false)
+</body>
 </html>

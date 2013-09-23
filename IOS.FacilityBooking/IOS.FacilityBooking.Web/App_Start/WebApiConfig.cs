@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using Newtonsoft.Json.Serialization;
 
-namespace IOS.FacilityBooking.Web
+namespace IOS
 {
     public static class WebApiConfig
     {
@@ -19,6 +20,13 @@ namespace IOS.FacilityBooking.Web
             // To avoid processing unexpected or malicious queries, use the validation settings on QueryableAttribute to validate incoming queries.
             // For more information, visit http://go.microsoft.com/fwlink/?LinkId=279712.
             //config.EnableQuerySupport();
+
+            // To disable tracing in your application, please comment out or remove the following line of code
+            // For more information, refer to: http://www.asp.net/web-api
+            config.EnableSystemDiagnosticsTracing();
+
+            // Use camel case for JSON data.
+            config.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
         }
     }
 }
