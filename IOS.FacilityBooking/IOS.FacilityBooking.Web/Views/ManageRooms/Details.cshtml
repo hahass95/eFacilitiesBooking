@@ -1,0 +1,70 @@
+﻿@using IOS.FacilityBooking.Core.DomainObjects
+@model IOS.FacilityBooking.Core.DomainObjects.Room
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Room</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Area)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Area)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Booked)
+    </div>
+<div>
+    @if (Model.SubFacilityList .Count >0)
+    {
+        <table>
+        <tr><th>Name</th><th>Description</th></tr>
+            @foreach (Facility f in Model.SubFacilityList)
+            {
+                <tr><th>@f.Name</th><th>@f.Description</th></tr>  
+            }
+        </table>
+    }
+</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Booked)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BookFromDateTime)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BookFromDateTime)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BookToDateTime)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BookToDateTime)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

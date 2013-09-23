@@ -1,0 +1,61 @@
+﻿@model IOS.FacilityBooking.Core.DomainObjects.Room
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Room</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Area)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Area)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Booked)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Booked)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BookFromDateTime)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BookFromDateTime)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BookToDateTime)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BookToDateTime)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

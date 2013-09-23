@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IOS.FacilityBooking.Web", "IOS.FacilityBooking.Web\IOS.FacilityBooking.Web.csproj", "{4887B69C-E555-4093-94AB-C2FFAC92EE3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IOS.FacilityBooking.Web.Tests", "IOS.FacilityBooking.Web.Tests\IOS.FacilityBooking.Web.Tests.csproj", "{5609F88F-B99C-4B10-A74F-D9FCC6EA0BAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IOS.FacilityBooking.Core", "IOS.FacilityBooking.Core\IOS.FacilityBooking.Core.csproj", "{BB819402-390B-4C92-B1E3-BC511F9E33A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IOS.FacilityBooking.DataAccess", "IOS.FacilityBooking.DataAccess\IOS.FacilityBooking.DataAccess.csproj", "{8C05B5CC-C222-4E8E-B733-CDCAC786FBA9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4887B69C-E555-4093-94AB-C2FFAC92EE3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4887B69C-E555-4093-94AB-C2FFAC92EE3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4887B69C-E555-4093-94AB-C2FFAC92EE3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4887B69C-E555-4093-94AB-C2FFAC92EE3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5609F88F-B99C-4B10-A74F-D9FCC6EA0BAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5609F88F-B99C-4B10-A74F-D9FCC6EA0BAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5609F88F-B99C-4B10-A74F-D9FCC6EA0BAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5609F88F-B99C-4B10-A74F-D9FCC6EA0BAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB819402-390B-4C92-B1E3-BC511F9E33A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB819402-390B-4C92-B1E3-BC511F9E33A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB819402-390B-4C92-B1E3-BC511F9E33A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB819402-390B-4C92-B1E3-BC511F9E33A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C05B5CC-C222-4E8E-B733-CDCAC786FBA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C05B5CC-C222-4E8E-B733-CDCAC786FBA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C05B5CC-C222-4E8E-B733-CDCAC786FBA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C05B5CC-C222-4E8E-B733-CDCAC786FBA9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
