@@ -60,6 +60,10 @@ h1 {
 	height: 635px;
 }
 
+#calender {
+	border: 1px solid red;
+}
+
 /* Menu */
 
 #main_menu {
