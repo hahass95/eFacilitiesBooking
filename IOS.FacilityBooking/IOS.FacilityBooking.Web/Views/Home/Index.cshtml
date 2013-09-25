@@ -12,22 +12,32 @@
 }
 
 <div id="main-content">
+	
+	@if(!User.Identity.IsAuthenticated)
+	{
+		<div id="loginPanel">
+			@{Html.RenderPartial("_LoginPartial");}
+		</div>
+		
+		<div id="registerPanel">
+			@{Html.RenderPartial("_RegisterPartial");}
+		</div>
+	}
+	else
+	{
+		
+		<div id="myBookingPanel">
+			@{Html.RenderPartial("_MyBookingPartial");}
+		</div>
+	
+		<div id="newBookingPanel">
+			@{Html.RenderPartial("_NewBookingPartial");}
+		</div>
 
-	<div id="homePanel">
-		@Html.Partial("_HomePartial")
-	</div>
-	<div id="registerPanel">
-        @Html.Partial("_RegisterPartial")
-    </div>
-	<div id="basicSearchPanel">
-		@Html.Partial("_BasicSearchPartial")
-	</div>
-	<div id="advanceSearchPanel">
-		@Html.Partial("_AdvanceSearchPartial")
-	</div>
-	<div id="changePasswordPanel">
-		@Html.Partial("_ChangePasswordPartial")
-	</div>
+		<div id="historyBookingPanel">
+			@{Html.RenderPartial("_HistoryBookingPartial");}
+		</div>
+	}
 
 </div>
 

@@ -1,4 +1,5 @@
 ﻿/* General Styling */
+
 body {
 	line-height: 1;
     font-family: Arial, sans-serif;
@@ -32,85 +33,268 @@ fieldset, form, label {
 	font-style: italic;
 }
 
-.vee-container {
-	position: relative;
+/* Header */
+
+#header {
+    background: #e8ebf1;
+    height: 100px;
+	border-bottom: 1px solid #6ec2ca;
+}
+
+h1 {
 	float: left;
+	margin-top: 35px;
+	width: 300px;
 }
 
-.form-error, .form-success {
-	display: none;
+/* Containers */
+
+.container {
+	margin: 0 auto;
+	width: 1000px;
 }
 
-.form-field-error {
-	border: 1px solid #dc3a3a;
+/* main_content */
+
+#main_content {
+	height: 635px;
 }
 
-.form-field-success {
-	border: 1px solid #329432;
+/* Menu */
+
+#main_menu {
+    float: left;
+    margin-top: 35px;
+	-webkit-user-select: none; /* Chrome/Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+ */
 }
 
-/* Button Styling */
-
-#loginButton {
-	width: 150px;
+#main_menu .main_menu_list {
+	color: #000;
+    font-size: 15px;
+    font-weight: normal;
+    text-transform: uppercase;
+	padding: 8px 8px;
+	margin-left: 30px;
+	float: left;
+	cursor: pointer;
 }
 
-#registerButton , #changePasswordButton {
-	margin-top: 10px;
-	margin-left: 3px;
-	width: 330px;
+	#main_menu .main_menu_list:hover {
+		border-bottom: 5px solid #2aacc8;
+	}
+
+#main_menu .current_selected {
+	border-bottom: 5px solid #2aacc8;
+	
 }
 
-#changePasswordButton {
-	width: 310px;
+/* Login Panel */
+
+.loginPanel_fullpage_container {
+	height: 100vh;
+	width: 100vw;
+	background-color: #2a2a2a;
 }
 
-#basicSearchButton , #advanceSearchButton{
-	width: 240px;
-	margin-top: 5px;
+#loginPanel_container {
 	position: relative;
+	top: 20%;
+	margin: 0 auto;
+	width: 350px;
+	height: 250px;
+	background-color: #fff;
+	-webkit-border-radius: 20px;
+	   -moz-border-radius: 20px;
+	        border-radius: 20px;
 }
 
-#loginButton , #registerButton , #basicSearchButton ,
-#advanceSearchButton , #changePasswordButton {
-	cursor: pointer;	
-	background: rgb(61, 157, 179);
-	padding: 6px 5px;
-	font-family: 'BebasNeueRegular','Arial Narrow',Arial,sans-serif;
-	color: #fff;
-	font-size: 20px;	
-	border: 1px solid rgb(28, 108, 122);	
-	margin-bottom: 10px;	
-	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+.loginPanel_header {
+	background: #3BB9FF;
+	border-bottom: 1px solid #6ec2ca;
+	height: 50px;
+	-webkit-border-top-left-radius: 20px;
+	   -moz-border-top-left-radius: 20px;
+	        border-top-left-radius: 20px;
+	-webkit-border-top-right-radius: 20px;
+	   -moz-border-top-right-radius: 20px;
+	        border-top-right-radius: 20px;
+}
+
+.loginPanel_header h2 {
+	font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+	padding-top: 10px;
+	padding-left: 5px;
+	color: #2a2a2a;
+	font-size: 25px;
+	border-bottom: 1px solid #fff;
+}
+
+.loginTableLabel {
+	text-align: left;
+	padding-left: 10px;
+	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+	color: #000;
+}
+
+.loginTableTextBox {
+	width: 320px;
+	float: left;
+	margin-top: 2px;
+	margin-left: 5px;
+	padding: 5px 5px 5px 5px;	
+	border: 1px solid rgb(178, 178, 178);
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	  -moz-box-sizing : content-box;
+	       box-sizing : content-box;
 	-webkit-border-radius: 3px;
 	   -moz-border-radius: 3px;
-	        border-radius: 3px;	
-	-webkit-box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
-	        0px 0px 0px 3px rgb(254, 254, 254),
-	        0px 5px 3px 3px rgb(210, 210, 210);
-	   -moz-box-shadow:0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
-	        0px 0px 0px 3px rgb(254, 254, 254),
-	        0px 5px 3px 3px rgb(210, 210, 210);
-	        box-shadow:0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
-	        0px 0px 0px 3px rgb(254, 254, 254),
-	        0px 5px 3px 3px rgb(210, 210, 210);
+	        border-radius: 3px;
+	-webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+	   -moz-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+	        box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
 	-webkit-transition: all 0.2s linear;
 	   -moz-transition: all 0.2s linear;
 	     -o-transition: all 0.2s linear;
 	        transition: all 0.2s linear;
 }
 
-	#loginButton:hover , #registerButton:hover , 
-	#basicSearchButton:hover , #advanceSearchButton:hover,
-	#changePasswordButton:hover {
+#loginCheckBox {
+	margin-left: 100px;
+}
+
+#loginButton {
+	margin-top: 5px;
+	margin-left: 5px;
+	width: 330px;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: 14px/100% Arial, Helvetica, sans-serif;
+	padding: .5em 2em .55em;
+	text-shadow: 0 1px 1px rgba(0,0,0,.3);
+	-webkit-border-radius: .5em; 
+	-moz-border-radius: .5em;
+	border-radius: .5em;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	color: #d9eef7;
+	border: solid 1px #0076a3;
+	background: #0095cd;
+	background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
+	background: -moz-linear-gradient(top,  #00adee,  #0078a5);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#00adee', endColorstr='#0078a5');
+}
+
+	#loginButton:hover {
 		background: rgb(74, 179, 198);
 	}
 
-	#loginButton:active, #loginButton:focus,
-	#registerButton:active, #registerButton:focus,
-	#basicSearchButton:active, #basicSearchButton:focus,
-	#advanceSearchButton:active, #advanceSearchButton:focus, 
-	#changePasswordButton:active, #changePasswordButton:focus{
+	#loginButton:active, #loginButton:focus {
+		background: rgb(40, 137, 154);
+		position: relative;
+		top: 1px;
+		border: 1px solid rgb(12, 76, 87);
+		-webkit-box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.2) inset;
+		-moz-box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.2) inset;
+		box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.2) inset;
+	}
+
+#showRegister {
+	color: #0099CC;
+	text-align: center;
+	font-size: 12px;
+}
+
+#signup {
+	color: rgb(64, 92, 96);
+	text-align: center;
+	font-size: 12px;
+}
+
+	#showRegister:hover {
+		cursor: pointer;
+	}
+
+/* Register Panel */
+
+#registerPanel {
+	display: none;
+}
+
+.registerPanel_fullpage_container {
+	height: 100vh;
+	width: 100vw;
+	background-color: #2a2a2a;
+}
+
+#registerPanel_container {
+	position: relative;
+	top: 10%;
+	margin: 0 auto;
+	width: 350px;
+	height: 570px;
+	background-color: #fff;
+	-webkit-border-radius: 20px;
+	   -moz-border-radius: 20px;
+	        border-radius: 20px;
+}
+
+.registerPanel_header {
+	background: #3BB9FF;
+	border-bottom: 1px solid #6ec2ca;
+	height: 50px;
+	-webkit-border-top-left-radius: 20px;
+	   -moz-border-top-left-radius: 20px;
+	        border-top-left-radius: 20px;
+	-webkit-border-top-right-radius: 20px;
+	   -moz-border-top-right-radius: 20px;
+	        border-top-right-radius: 20px;
+}
+
+.registerPanel_header h2 {
+	font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+	padding-top: 10px;
+	padding-left: 5px;
+	color: #2a2a2a;
+	font-size: 25px;
+	border-bottom: 1px solid #fff;
+}
+
+#registerButton {
+	margin-top: 5px;
+	margin-left: 5px;
+	width: 330px;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: 14px/100% Arial, Helvetica, sans-serif;
+	padding: .5em 2em .55em;
+	text-shadow: 0 1px 1px rgba(0,0,0,.3);
+	-webkit-border-radius: .5em; 
+	-moz-border-radius: .5em;
+	border-radius: .5em;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	color: #d9eef7;
+	border: solid 1px #0076a3;
+	background: #0095cd;
+	background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
+	background: -moz-linear-gradient(top,  #00adee,  #0078a5);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#00adee', endColorstr='#0078a5');
+}
+
+	#registerButton:hover {
+		background: rgb(74, 179, 198);
+	}
+
+	#registerButton:active, #registerButton:focus {
 		background: rgb(40, 137, 154);
 		position: relative;
 		top: 1px;
@@ -137,20 +321,11 @@ fieldset, form, label {
 		text-shadow: 0 -1px 1px #ebebeb;
 	}
 
-/* TextBox Styling */
-
-.registerTextBox , .changePasswordTextBox{
-	width: 300px;
+.registerTextBox {
+	width: 320px;
 	float: left;
-}
-
-.basicSearchTextBox , .advanceSearchTextBox {
-	width: 210px;
-	float: left;
-}
-
-.registerTextBox , .basicSearchTextBox , .advanceSearchTextBox , .changePasswordTextBox{
 	margin-top: 2px;
+	margin-left: 5px;
 	padding: 5px 5px 5px 5px;	
 	border: 1px solid rgb(178, 178, 178);
 	-webkit-appearance: textfield;
@@ -169,54 +344,96 @@ fieldset, form, label {
 	        transition: all 0.2s linear;
 }
 
-/* Select Styling */
+	#registerTable .registerTablelabel {
+		text-align: left;
+		padding-left: 10px;
+		font-size: 14px;
+		font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+		color: #000;
+	}
 
-select {
-	float: left;
-	width: 70px;
-	font-size: 15px;
-	-webkit-border-radius: 3px;
-	   -moz-border-radius: 3px;
-	        border-radius: 3px;
-	border: 1px solid rgb(178, 178, 178);
+#showtermsNconditions {
+	cursor: pointer;
+	color: #0099CC;
+	text-decoration: underline;
 }
 
-.Minutes {
-	padding-left: 75px;
+#registerAgree, #registerAgreeLabel {
+	margin-top: 10px;
+	margin-left: 10px;
+	display: inline-block;
+	font-size: 15px;	
 }
 
-.AMPM {
-	padding-left: 150px;
+#registerAgree {
+	margin-left: 6px;
 }
 
-/* Live Clock Styling */
-
-#live_clock_container {
-	position: relative;
-	margin-top: 3px;
-	border: 1px solid #0099CC;
-	-webkit-border-radius: 3px;
-	   -moz-border-radius: 3px;
-	        border-radius: 3px;
-	background-color: #6698FF;
+#registerAgreeLabel {
+	margin-left: 5px;
 }
 
-#live_clock {
-	font-family: Copperplate, "Copperplate Gothic Light", fantasy;
-	font-size: 11px;
-	color: #fcfcfc;
+#showLogin {
+	color: #0099CC;
 	text-align: center;
+	font-size: 12px;
 }
 
-/* Loader */
+#login {
+	color: rgb(64, 92, 96);
+	text-align: center;
+	font-size: 12px;
+}
 
-#jquery-loader-background{background-color: silver}
-#jquery-loader.blue-with-image-2{
-    border:none;
-    padding-top:35px;
-    background-color: transparent;
-    text-align: center;
-    background-image: url(images/spinner.gif);
-    background-position: center center;
-    background-repeat: no-repeat; 
+	#showLogin:hover {
+		cursor: pointer;
+	}
+
+/* General Panel */
+
+#newBookingPanel, #historyBookingPanel, #termsNconditions {
+	display: none;
+}
+
+.generalPanel_header{
+	background: #81e4ed;
+	border-bottom: 1px solid #6ec2ca;
+}
+
+.generalPanel_header_container {
+	margin: 0 auto;
+	width: 1000px;
+	height: 50px;
+}
+
+.generalPanel_header h2 {
+	font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+	padding-top: 10px;
+	color: #2a2a2a;
+	font-size: 25px;
+	border-bottom: 1px solid #fff;
+}
+
+.generalPanel_body_container {
+	margin: 10px auto;
+	height: 550px;
+	width: 1000px;
+	background-color:#f4f4f4;
+	border:1px solid #fff;
+	padding: 5px;
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-box-shadow:0px 0px 3px #aaa;
+    -webkit-box-shadow:0px 0px 3px #aaa;
+    box-shadow:0px 0px 3px #aaa;   
+}
+
+/* Footer */
+
+#footer {
+    border-top: 3px solid #81e4ed;
+    clear: both;
+    height: 100px;
+	background: #e8ebf1;
 }

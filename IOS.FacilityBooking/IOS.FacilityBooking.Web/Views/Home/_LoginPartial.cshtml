@@ -1,0 +1,43 @@
+﻿@model IOS.FacilityBooking.Web.Models.LoginModel
+
+<div class="loginPanel_fullpage_container">
+	<div id="loginPanel_container">
+		<div class="loginPanel_header">
+			<h2>User Login</h2>
+		</div>
+		<div class="loginPanel_body">
+			<div class="loginPanel_body_container">
+				@using (Html.BeginForm("JsonLogin", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { id = "loginForm" }))
+				{
+					@Html.AntiForgeryToken()
+					<table id="loginTable">
+						<tr>
+							<td class="loginTableLabel">@Html.LabelFor(m => m.UserName)</td>
+						</tr>
+						<tr>
+							<td>@Html.TextBoxFor(m => m.UserName, new { @class = "loginTableTextBox", autofocus = "autofocus", id = "loginName", placeholder = "Enter Username Here.." })</td>
+							@Html.ValidationMessageFor(m => m.UserName)
+						</tr>
+						<tr>
+							<td class="loginTableLabel">@Html.LabelFor(m => m.Password)</td>
+						</tr>
+						<tr>
+							<td>@Html.PasswordFor(m => m.Password, new { @class = "loginTableTextBox", id = "loginPass", placeholder = "Enter Password Here.." })</td>
+							@Html.ValidationMessageFor(m => m.Password)
+						</tr>
+						<tr>
+							<td><input id="loginButton" type="submit" value="Login" /></td>
+						</tr>
+						<tr>
+							<td id="signup">
+								<p>Not a Member yet? <a id="showRegister">Register Now!</a></p>
+							</td>
+						</tr>
+					</table>
+				}
+			</div>
+		</div>
+	</div>
+</div>
+	
+

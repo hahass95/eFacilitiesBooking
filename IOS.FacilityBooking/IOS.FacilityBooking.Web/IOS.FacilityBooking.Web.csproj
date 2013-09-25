@@ -174,13 +174,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
-    <Compile Include="Models\SearchModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\General_Styling.css" />
     <Content Include="Content\images\ajax-loader.gif" />
     <Content Include="Content\images\animated-overlay.gif" />
+    <Content Include="Content\images\mainNavBg.png" />
     <Content Include="Content\images\spinner.gif" />
     <Content Include="Content\images\ui-bg_flat_55_999999_40x100.png" />
     <Content Include="Content\images\ui-bg_flat_75_aaaaaa_40x100.png" />
@@ -199,9 +199,6 @@
     <Content Include="Content\images\ui-icons_f7a50d_256x240.png" />
     <Content Include="Content\images\ui-icons_fcd113_256x240.png" />
     <Content Include="Content\jquery-ui-1.10.3.custom.css" />
-    <Content Include="Content\LeftContainer_Styling.css" />
-    <Content Include="Content\MainContainer_Styling.css" />
-    <Content Include="Content\Panel_Styling.css" />
     <Content Include="Content\themes\base\images\animated-overlay.gif" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -267,13 +264,10 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <None Include="Scripts\jquery-2.0.3.intellisense.js" />
-    <Content Include="Scripts\app\datepicker.js" />
     <Content Include="Scripts\app\jquery-ui-1.10.3.custom.js" />
     <Content Include="Scripts\app\jquery.loader.js" />
-    <Content Include="Scripts\app\live_clock.js" />
-    <Content Include="Scripts\app\panel.js" />
+    <Content Include="Scripts\app\jquery.transit.js" />
     <Content Include="Scripts\app\raphael.js" />
-    <Content Include="Scripts\app\validation.js" />
     <Content Include="Scripts\jquery-2.0.3.js" />
     <Content Include="Scripts\jquery-2.0.3.min.js" />
     <Content Include="Scripts\jquery-2.0.3.min.map" />
@@ -299,7 +293,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Scripts\_references.js" />
-    <Content Include="Scripts\app\ajax.js" />
+    <Content Include="Scripts\app\General_Script.js" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\bullet.png" />
     <Content Include="Images\heroAccent.png" />
@@ -314,7 +308,6 @@
     <Content Include="Images\orderedList8.png" />
     <Content Include="Images\orderedList9.png" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Home\_ChangePasswordPartial.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\_RemoveExternalLoginsPartial.cshtml" />
     <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
@@ -326,10 +319,11 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Home\_HomePartial.cshtml" />
-    <Content Include="Views\Home\_BasicSearchPartial.cshtml" />
-    <Content Include="Views\Home\_AdvanceSearchPartial.cshtml" />
+    <Content Include="Views\Home\_MyBookingPartial.cshtml" />
+    <Content Include="Views\Home\_NewBookingPartial.cshtml" />
+    <Content Include="Views\Home\_HistoryBookingPartial.cshtml" />
     <Content Include="Views\Home\_RegisterPartial.cshtml" />
+    <Content Include="Views\Home\_LoginPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
