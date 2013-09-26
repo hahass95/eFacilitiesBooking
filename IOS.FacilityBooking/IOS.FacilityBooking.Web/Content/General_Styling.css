@@ -2,10 +2,10 @@
 
 body {
 	line-height: 1;
-    font-family: Arial, sans-serif;
-	/*-webkit-user-select: none;  Chrome/Safari */        
-		/*-moz-user-select: none;  Firefox */
-		/*-ms-user-select: none;  IE10+ */
+	font-family: Arial, sans-serif;
+	/*-webkit-user-select: none;  Chrome/Safari */
+	/*-moz-user-select: none;  Firefox */
+	/*-ms-user-select: none;  IE10+ */
 }
 
 ol, ul {
@@ -28,16 +28,16 @@ fieldset, form, label {
 	vertical-align: baseline;
 }
 
-::-webkit-input-placeholder  { 
-	color: rgb(190, 188, 188); 
+::-webkit-input-placeholder {
+	color: rgb(190, 188, 188);
 	font-style: italic;
 }
 
 /* Header */
 
 #header {
-    background: #e8ebf1;
-    height: 100px;
+	background: #e8ebf1;
+	height: 100px;
 	border-bottom: 1px solid #6ec2ca;
 }
 
@@ -60,39 +60,38 @@ h1 {
 	height: 635px;
 }
 
-#calender {
-	border: 1px solid red;
+#calendar {
+	margin: 0 auto;
 }
 
 /* Menu */
 
 #main_menu {
-    float: left;
-    margin-top: 35px;
-	-webkit-user-select: none; /* Chrome/Safari */        
+	float: left;
+	margin-top: 35px;
+	-webkit-user-select: none; /* Chrome/Safari */
 	-moz-user-select: none; /* Firefox */
 	-ms-user-select: none; /* IE10+ */
 }
 
-#main_menu .main_menu_list {
-	color: #000;
-    font-size: 15px;
-    font-weight: normal;
-    text-transform: uppercase;
-	padding: 8px 8px;
-	margin-left: 30px;
-	float: left;
-	cursor: pointer;
-}
-
-	#main_menu .main_menu_list:hover {
-		border-bottom: 5px solid #2aacc8;
+	#main_menu .main_menu_list {
+		color: #000;
+		font-size: 15px;
+		font-weight: normal;
+		text-transform: uppercase;
+		padding: 8px 8px;
+		margin-left: 30px;
+		float: left;
+		cursor: pointer;
 	}
 
-#main_menu .current_selected {
-	border-bottom: 5px solid #2aacc8;
-	
-}
+		#main_menu .main_menu_list:hover {
+			border-bottom: 5px solid #2aacc8;
+		}
+
+	#main_menu .current_selected {
+		border-bottom: 5px solid #2aacc8;
+	}
 
 /* Login Panel */
 
@@ -110,8 +109,8 @@ h1 {
 	height: 250px;
 	background-color: #fff;
 	-webkit-border-radius: 20px;
-	   -moz-border-radius: 20px;
-	        border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
 }
 
 .loginPanel_header {
@@ -119,21 +118,21 @@ h1 {
 	border-bottom: 1px solid #6ec2ca;
 	height: 50px;
 	-webkit-border-top-left-radius: 20px;
-	   -moz-border-top-left-radius: 20px;
-	        border-top-left-radius: 20px;
+	-moz-border-top-left-radius: 20px;
+	border-top-left-radius: 20px;
 	-webkit-border-top-right-radius: 20px;
-	   -moz-border-top-right-radius: 20px;
-	        border-top-right-radius: 20px;
+	-moz-border-top-right-radius: 20px;
+	border-top-right-radius: 20px;
 }
 
-.loginPanel_header h2 {
-	font-family: Copperplate, "Copperplate Gothic Light", fantasy;
-	padding-top: 10px;
-	padding-left: 5px;
-	color: #2a2a2a;
-	font-size: 25px;
-	border-bottom: 1px solid #fff;
-}
+	.loginPanel_header h2 {
+		font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+		padding-top: 10px;
+		padding-left: 5px;
+		color: #2a2a2a;
+		font-size: 25px;
+		border-bottom: 1px solid #fff;
+	}
 
 .loginTableLabel {
 	text-align: left;
@@ -147,22 +146,22 @@ h1 {
 	float: left;
 	margin-top: 2px;
 	margin-left: 5px;
-	padding: 5px 5px 5px 5px;	
+	padding: 5px 5px 5px 5px;
 	border: 1px solid rgb(178, 178, 178);
 	-webkit-appearance: textfield;
 	-webkit-box-sizing: content-box;
-	  -moz-box-sizing : content-box;
-	       box-sizing : content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
 	-webkit-border-radius: 3px;
-	   -moz-border-radius: 3px;
-	        border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
 	-webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
-	   -moz-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
-	        box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+	-moz-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+	box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
 	-webkit-transition: all 0.2s linear;
-	   -moz-transition: all 0.2s linear;
-	     -o-transition: all 0.2s linear;
-	        transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
 }
 
 #loginCheckBox {
@@ -180,7 +179,7 @@ h1 {
 	font: 14px/100% Arial, Helvetica, sans-serif;
 	padding: .5em 2em .55em;
 	text-shadow: 0 1px 1px rgba(0,0,0,.3);
-	-webkit-border-radius: .5em; 
+	-webkit-border-radius: .5em;
 	-moz-border-radius: .5em;
 	border-radius: .5em;
 	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
@@ -190,8 +189,8 @@ h1 {
 	border: solid 1px #0076a3;
 	background: #0095cd;
 	background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
-	background: -moz-linear-gradient(top,  #00adee,  #0078a5);
-	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#00adee', endColorstr='#0078a5');
+	background: -moz-linear-gradient(top, #00adee, #0078a5);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00adee', endColorstr='#0078a5');
 }
 
 	#loginButton:hover {
@@ -220,9 +219,9 @@ h1 {
 	font-size: 12px;
 }
 
-	#showRegister:hover {
-		cursor: pointer;
-	}
+#showRegister:hover {
+	cursor: pointer;
+}
 
 /* Register Panel */
 
@@ -244,8 +243,8 @@ h1 {
 	height: 570px;
 	background-color: #fff;
 	-webkit-border-radius: 20px;
-	   -moz-border-radius: 20px;
-	        border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
 }
 
 .registerPanel_header {
@@ -253,21 +252,21 @@ h1 {
 	border-bottom: 1px solid #6ec2ca;
 	height: 50px;
 	-webkit-border-top-left-radius: 20px;
-	   -moz-border-top-left-radius: 20px;
-	        border-top-left-radius: 20px;
+	-moz-border-top-left-radius: 20px;
+	border-top-left-radius: 20px;
 	-webkit-border-top-right-radius: 20px;
-	   -moz-border-top-right-radius: 20px;
-	        border-top-right-radius: 20px;
+	-moz-border-top-right-radius: 20px;
+	border-top-right-radius: 20px;
 }
 
-.registerPanel_header h2 {
-	font-family: Copperplate, "Copperplate Gothic Light", fantasy;
-	padding-top: 10px;
-	padding-left: 5px;
-	color: #2a2a2a;
-	font-size: 25px;
-	border-bottom: 1px solid #fff;
-}
+	.registerPanel_header h2 {
+		font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+		padding-top: 10px;
+		padding-left: 5px;
+		color: #2a2a2a;
+		font-size: 25px;
+		border-bottom: 1px solid #fff;
+	}
 
 #registerButton {
 	margin-top: 5px;
@@ -280,7 +279,7 @@ h1 {
 	font: 14px/100% Arial, Helvetica, sans-serif;
 	padding: .5em 2em .55em;
 	text-shadow: 0 1px 1px rgba(0,0,0,.3);
-	-webkit-border-radius: .5em; 
+	-webkit-border-radius: .5em;
 	-moz-border-radius: .5em;
 	border-radius: .5em;
 	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
@@ -290,8 +289,8 @@ h1 {
 	border: solid 1px #0076a3;
 	background: #0095cd;
 	background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
-	background: -moz-linear-gradient(top,  #00adee,  #0078a5);
-	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#00adee', endColorstr='#0078a5');
+	background: -moz-linear-gradient(top, #00adee, #0078a5);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00adee', endColorstr='#0078a5');
 }
 
 	#registerButton:hover {
@@ -330,31 +329,31 @@ h1 {
 	float: left;
 	margin-top: 2px;
 	margin-left: 5px;
-	padding: 5px 5px 5px 5px;	
+	padding: 5px 5px 5px 5px;
 	border: 1px solid rgb(178, 178, 178);
 	-webkit-appearance: textfield;
 	-webkit-box-sizing: content-box;
-	  -moz-box-sizing : content-box;
-	       box-sizing : content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
 	-webkit-border-radius: 3px;
-	   -moz-border-radius: 3px;
-	        border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
 	-webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
-	   -moz-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
-	        box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+	-moz-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+	box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
 	-webkit-transition: all 0.2s linear;
-	   -moz-transition: all 0.2s linear;
-	     -o-transition: all 0.2s linear;
-	        transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
 }
 
-	#registerTable .registerTablelabel {
-		text-align: left;
-		padding-left: 10px;
-		font-size: 14px;
-		font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
-		color: #000;
-	}
+#registerTable .registerTablelabel {
+	text-align: left;
+	padding-left: 10px;
+	font-size: 14px;
+	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+	color: #000;
+}
 
 #showtermsNconditions {
 	cursor: pointer;
@@ -366,7 +365,7 @@ h1 {
 	margin-top: 10px;
 	margin-left: 10px;
 	display: inline-block;
-	font-size: 15px;	
+	font-size: 15px;
 }
 
 #registerAgree {
@@ -389,9 +388,9 @@ h1 {
 	font-size: 12px;
 }
 
-	#showLogin:hover {
-		cursor: pointer;
-	}
+#showLogin:hover {
+	cursor: pointer;
+}
 
 /* General Panel */
 
@@ -399,7 +398,7 @@ h1 {
 	display: none;
 }
 
-.generalPanel_header{
+.generalPanel_header {
 	background: #81e4ed;
 	border-bottom: 1px solid #6ec2ca;
 }
@@ -422,22 +421,115 @@ h1 {
 	margin: 10px auto;
 	height: 550px;
 	width: 1000px;
-	background-color:#f4f4f4;
-	border:1px solid #fff;
+	background-color: #f4f4f4;
+	border: 1px solid #fff;
 	padding: 5px;
 	-moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    -moz-box-shadow:0px 0px 3px #aaa;
-    -webkit-box-shadow:0px 0px 3px #aaa;
-    box-shadow:0px 0px 3px #aaa;   
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-moz-box-shadow: 0px 0px 3px #aaa;
+	-webkit-box-shadow: 0px 0px 3px #aaa;
+	box-shadow: 0px 0px 3px #aaa;
+}
+
+/* Calendar */
+
+.mc {
+	border: 1px solid red;
+}
+
+	.mc table {
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+
+html .mc,
+.mc table {
+	font-size: 1em;
+}
+
+	.mc td,
+	.mc th {
+		padding: 0;
+		vertical-align: top;
+	}
+
+.mc-content {
+	border: 1px solid blue;
+	position: relative;
+	clear: both;
+	zoom: 1; /* for IE7, gives accurate coordinates for [un]freezeContentHeight */
+}
+
+.mc-header {
+	width: 100%;
+}
+
+.mc-header td {
+	white-space: nowrap;
+}
+
+.mc-header-left {
+	width: 25%;
+	text-align: left;
+}
+
+.mc-header-center {
+	text-align: center;
+}
+
+.mc-header-right {
+	width: 25%;
+	text-align: right;
+}
+
+.mc-header-title {
+	display: inline-block;
+	vertical-align: top;
+}
+
+	.mc-header-title h3 {
+		margin-top: 0;
+		white-space: nowrap;
+	}
+
+.mc .mc-header-space {
+	padding-left: 10px;
+}
+
+.mc-header .mc-button {
+	margin-bottom: 1em;
+	vertical-align: top;
+}
+
+.mc-header .mc-button {
+	margin-right: -1px;
+}
+
+.mc-header .mc-corner-right, /* non-theme */
+.mc-header .ui-corner-right { /* theme */
+	margin-right: 0; /* back to normal */
+}
+
+.mc-header .mc-state-hover,
+.mc-header .mc-state-hover {
+	z-index: 2;
+}
+
+.mc-header .mc-state-down {
+	z-index: 3;
+}
+
+.mc-header .mc-state-active,
+.mc-header .ui-state-active {
+	z-index: 4;
 }
 
 /* Footer */
 
 #footer {
-    border-top: 3px solid #81e4ed;
-    clear: both;
-    height: 100px;
+	border-top: 3px solid #81e4ed;
+	clear: both;
+	height: 100px;
 	background: #e8ebf1;
 }

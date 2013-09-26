@@ -23,7 +23,8 @@ namespace IOS
                         "~/Scripts/knockout-{version}.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/javascript").Include(
-                "~/Scripts/app/*.js"));
+                "~/Scripts/app/jquery-2.0.3.js",
+				"~/Scripts/app/General_Script.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/todo").Include(
                 "~/Scripts/app/todo.bindings.js",

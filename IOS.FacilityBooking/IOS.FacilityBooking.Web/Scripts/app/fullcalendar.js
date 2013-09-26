@@ -18,7 +18,7 @@
 var defaults = {
 
 	// display
-	defaultView: 'month',
+	defaultView: 'agendaWeek',
 	aspectRatio: 1.35,
 	header: {
 		left: 'title',
@@ -70,10 +70,10 @@ var defaults = {
 		next: "<span class='fc-text-arrow'>&rsaquo;</span>",
 		prevYear: "<span class='fc-text-arrow'>&laquo;</span>",
 		nextYear: "<span class='fc-text-arrow'>&raquo;</span>",
-		today: 'today',
-		month: 'month',
-		week: 'week',
-		day: 'day'
+		today: 'Today',
+		month: 'Month',
+		week: 'Week',
+		day: 'Day'
 	},
 	
 	// jquery-ui theming
