@@ -275,6 +275,7 @@
     <Content Include="Scripts\app\jquery-2.0.3.js" />
     <Content Include="Scripts\app\jquery-2.0.3.min.js" />
     <Content Include="Scripts\jquery-2.0.3.js" />
+    <Content Include="Scripts\jquery-2.0.3.min.js" />
     <Content Include="Scripts\jquery-2.0.3.min.map" />
     <Content Include="Scripts\jquery-ui-1.10.3.js" />
     <Content Include="Scripts\jquery-ui-1.10.3.min.js" />
