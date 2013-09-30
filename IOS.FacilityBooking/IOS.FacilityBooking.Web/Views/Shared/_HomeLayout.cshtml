@@ -16,7 +16,7 @@
     <title>@ViewBag.Title - eRoom Booking</title>
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <meta name="viewport" content="width=device-width" />
-	@Styles.Render("~/Content/css")
+	<link href="~/Content/eRoomBookingUser.css" rel="stylesheet" />
     @Scripts.Render("~/bundles/modernizr")
 	<script src="~/Scripts/app/jquery-2.0.3.js"></script>
 	<script src="~/Scripts/app/jquery-2.0.3.min.js"></script>
@@ -51,6 +51,7 @@
 
 		<div id="footer">
 			<div class="footer_container">
+				@Html.ActionLink("Go To Admin", "Home", "Admin")
 			</div>
 		</div>
 	} 
@@ -59,7 +60,7 @@
 		@RenderBody()
 	}
 
-	<script src="~/Scripts/app/General_Script.js"></script>
+	<script src="~/Scripts/app/eRoomBookingUser.js"></script>
 	@RenderSection("scripts", required: false)
 
 </body>
