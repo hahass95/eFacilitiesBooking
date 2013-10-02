@@ -28,7 +28,7 @@ namespace IOS.Controllers
                 if (WebSecurity.Login(model.UserName, model.Password, persistCookie: model.RememberMe))
                 {
                     FormsAuthentication.SetAuthCookie(model.UserName, model.RememberMe);
-                    return Json(new { success = true, redirect = returnUrl });
+					return Json(new { success = true, redirect = returnUrl });
                 }
                 else
                 {

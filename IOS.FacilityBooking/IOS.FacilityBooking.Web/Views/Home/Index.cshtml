@@ -1,6 +1,7 @@
 ﻿@model IOS.FacilityBooking.Web.Models.LoginModel
 @{
     ViewBag.Title = "iOneSoftSolutions";
+	Layout = "~/Views/Home/_HomeLayout.cshtml";
 }
 @functions{
     public string GetAntiForgeryToken()
@@ -25,17 +26,8 @@
 	}
 	else
 	{
-		
-		<div id="myBookingPanel">
-			@{Html.RenderPartial("_MyBookingPartial");}
-		</div>
-	
-		<div id="newBookingPanel">
-			@{Html.RenderPartial("_NewBookingPartial");}
-		</div>
-
-		<div id="historyBookingPanel">
-			@{Html.RenderPartial("_HistoryBookingPartial");}
+		<div id="adminSelectionPanel">
+			@{Html.RenderPartial("_AdminSelection");}
 		</div>
 	}
 

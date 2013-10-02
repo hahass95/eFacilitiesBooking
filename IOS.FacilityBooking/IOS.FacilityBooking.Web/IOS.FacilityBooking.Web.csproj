@@ -40,6 +40,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DotNetOpenAuth.AspNet">
+      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.3.1.13153\lib\net40-full\DotNetOpenAuth.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.Core">
+      <HintPath>..\packages\DotNetOpenAuth.Core.4.3.1.13153\lib\net40-full\DotNetOpenAuth.Core.dll</HintPath>
+    </Reference>
     <Reference Include="JQueryUIHelpers">
       <HintPath>..\packages\jQueryUIHelpers.Mvc4.2.1.0\lib\net40\JQueryUIHelpers.dll</HintPath>
     </Reference>
@@ -62,6 +68,9 @@
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="OAuth">
+      <HintPath>..\packages\OAuth.1.0.3\lib\net40\OAuth.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -169,6 +178,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Filters\ValidateHttpAntiForgeryTokenAttribute.cs" />
     <Compile Include="Global.asax.cs">
@@ -178,10 +188,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\AdminProperty.css" />
-    <Content Include="Content\eRoomBookingUser.css" />
+    <Content Include="Content\AdminModule.css" />
+    <Content Include="Content\BookingModule.css" />
     <Content Include="Content\images\ajax-loader.gif" />
     <Content Include="Content\images\animated-overlay.gif" />
+    <Content Include="Content\images\back.png" />
     <Content Include="Content\images\hotel.jpg" />
     <Content Include="Content\images\mainNavBg.png" />
     <Content Include="Content\images\spinner.gif" />
@@ -216,6 +227,7 @@
     <Content Include="Content\images\ui-icons_fcd113_256x240.png" />
     <Content Include="Content\images\ui-icons_ffffff_256x240.png" />
     <Content Include="Content\jquery-ui-1.10.3.custom.css" />
+    <Content Include="Content\LoginModule.css" />
     <Content Include="Content\themes\base\images\animated-overlay.gif" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -281,13 +293,14 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <None Include="Scripts\jquery-2.0.3.intellisense.js" />
-    <Content Include="Scripts\app\AdminProperty.js" />
+    <Content Include="Scripts\app\AdminModule.js" />
     <Content Include="Scripts\app\Calendar.js" />
     <Content Include="Scripts\app\jquery-ui-1.10.3.custom.js" />
     <Content Include="Scripts\app\jquery-ui.custom.min.js" />
     <Content Include="Scripts\app\jquery.min.js" />
     <Content Include="Scripts\app\jquery-2.0.3.js" />
     <Content Include="Scripts\app\jquery-2.0.3.min.js" />
+    <Content Include="Scripts\app\LoginModule.js" />
     <Content Include="Scripts\jquery-2.0.3.js" />
     <Content Include="Scripts\jquery-2.0.3.min.js" />
     <Content Include="Scripts\jquery-2.0.3.min.map" />
@@ -313,7 +326,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Scripts\_references.js" />
-    <Content Include="Scripts\app\eRoomBookingUser.js" />
+    <Content Include="Scripts\app\BookingModule.js" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\bullet.png" />
     <Content Include="Images\heroAccent.png" />
@@ -336,17 +349,21 @@
     <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_UserSettings.cshtml" />
-    <Content Include="Views\Shared\_HomeLayout.cshtml" />
+    <Content Include="Views\Home\_HomeLayout.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Home\_MyBookingPartial.cshtml" />
-    <Content Include="Views\Home\_NewBookingPartial.cshtml" />
-    <Content Include="Views\Home\_HistoryBookingPartial.cshtml" />
+    <Content Include="Views\User\_MyBookingPartial.cshtml" />
+    <Content Include="Views\User\_NewBookingPartial.cshtml" />
+    <Content Include="Views\User\_HistoryBookingPartial.cshtml" />
     <Content Include="Views\Home\_RegisterPartial.cshtml" />
     <Content Include="Views\Home\_LoginPartial.cshtml" />
-    <Content Include="Views\Shared\_AdminLayout.cshtml" />
+    <Content Include="Views\Admin\_AdminLayout.cshtml" />
     <Content Include="Views\Admin\Home.cshtml" />
     <Content Include="Views\Admin\_CreateHotel.cshtml" />
+    <Content Include="Views\Admin\_HotelMenu.cshtml" />
+    <Content Include="Views\User\_UserHomeLayout.cshtml" />
+    <Content Include="Views\User\UserHome.cshtml" />
+    <Content Include="Views\Home\_AdminSelection.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

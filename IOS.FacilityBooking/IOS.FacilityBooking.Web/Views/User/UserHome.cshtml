@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "_AdminSelection";
+    Layout = "~/Views/User/_UserHomeLayout.cshtml";
+}
+@functions{
+    public string GetAntiForgeryToken()
+    {
+        string cookieToken, formToken;
+        AntiForgery.GetTokens(null, out cookieToken, out formToken);
+        return cookieToken + ":" + formToken;                
+    }
+}
+
+<div id="main-content">
+		
+	<div id="myBookingPanel">
+		@{Html.RenderPartial("_MyBookingPartial");}
+	</div>
+	
+	<div id="newBookingPanel">
+		@{Html.RenderPartial("_NewBookingPartial");}
+	</div>
+
+	<div id="historyBookingPanel">
+		@{Html.RenderPartial("_HistoryBookingPartial");}
+	</div>
+
+</div>
+
+@if (@User.Identity.IsAuthenticated)
+{
+    @section scripts {
+        @Scripts.Render("~/bundles/knockout")
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+}

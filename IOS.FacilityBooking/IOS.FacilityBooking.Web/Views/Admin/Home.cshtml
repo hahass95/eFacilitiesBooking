@@ -1,7 +1,11 @@
 ﻿@{
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
 }
 
 <div id="createHotelPanel">
 	@{Html.RenderPartial("_CreateHotel");}
+</div>
+
+<div id="hotelMenuPanel">
+	@{Html.RenderPartial("_HotelMenu");}
 </div>

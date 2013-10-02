@@ -16,17 +16,17 @@
 		<table class="createHotelTable">
 			<tr>
 				<td>
-					<p>Name of Hotel :</p>
+					<p class="labelName">Name of Hotel :</p>
 				</td>
-				<td>
-					<input id="nameHotel" type="text" /></td>
+				<td><input id="nameHotel" maxlength="20" type="text" autocomplete="off" /></td>
+				<td id="errorName"></td>
 			</tr>
 			<tr>
-				<td style="vertical-align: top">
+				<td class="labelName" style="vertical-align: top">
 					<p>Description :</p>
 				</td>
-				<td>
-					<textarea rows="6" id="descriptionHotel"></textarea></td>
+				<td><textarea rows="6" id="descriptionHotel"></textarea></td>
+				<td id="errorDescription"></td>
 			</tr>
 			<tr>
 				<td></td>
@@ -39,7 +39,7 @@
 
 <div class="body_container">
 	<div class="hotelDisplay">
-		
+
 	</div>
 </div>
 

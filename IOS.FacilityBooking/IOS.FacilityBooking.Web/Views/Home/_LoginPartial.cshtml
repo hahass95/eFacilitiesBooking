@@ -7,7 +7,7 @@
 		</div>
 		<div class="loginPanel_body">
 			<div class="loginPanel_body_container">
-				@using (Html.BeginForm("JsonLogin", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { id = "loginForm" }))
+				@using (Html.BeginForm("JsonLogin", "Account", new { ReturnUrl = "/Home/" }, FormMethod.Post, new { id = "loginForm" }))
 				{
 					@Html.AntiForgeryToken()
 					<table id="loginTable">
