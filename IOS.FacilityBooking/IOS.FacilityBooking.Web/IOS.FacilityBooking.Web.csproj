@@ -228,6 +228,7 @@
     <Content Include="Content\images\ui-icons_ffffff_256x240.png" />
     <Content Include="Content\jquery-ui-1.10.3.custom.css" />
     <Content Include="Content\LoginModule.css" />
+    <Content Include="Content\Messi.css" />
     <Content Include="Content\themes\base\images\animated-overlay.gif" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -297,10 +298,12 @@
     <Content Include="Scripts\app\Calendar.js" />
     <Content Include="Scripts\app\jquery-ui-1.10.3.custom.js" />
     <Content Include="Scripts\app\jquery-ui.custom.min.js" />
-    <Content Include="Scripts\app\jquery.min.js" />
+    <Content Include="Scripts\app\jquery-isLoading.js" />
     <Content Include="Scripts\app\jquery-2.0.3.js" />
     <Content Include="Scripts\app\jquery-2.0.3.min.js" />
     <Content Include="Scripts\app\LoginModule.js" />
+    <Content Include="Scripts\app\Messi.js" />
+    <Content Include="Scripts\app\raphael.js" />
     <Content Include="Scripts\jquery-2.0.3.js" />
     <Content Include="Scripts\jquery-2.0.3.min.js" />
     <Content Include="Scripts\jquery-2.0.3.min.map" />

@@ -76,19 +76,35 @@ fieldset, form, label {
 			border-bottom: 3px solid #f5f5f5;
 		}
 
-.main_menu ul .menu_item {
-	color: #f5f5f5;
-	font-size: 16px;
-	float: left;
-	padding: 5px;
-	margin-left: 10px;
-	margin-right: 10px;
-	margin-top: 10px;
-	text-decoration: none;
-	text-transform: capitalize;
-	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-	cursor: pointer;
-}
+	.main_menu ul .menu_item {
+		color: #f5f5f5;
+		font-size: 16px;
+		float: left;
+		padding: 5px;
+		margin-left: 10px;
+		margin-right: 10px;
+		margin-top: 10px;
+		text-decoration: none;
+		text-transform: capitalize;
+		text-align: center;
+		font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+		cursor: pointer;
+	}
+
+	.main_menu ul .menu_item_right {
+		color: #f5f5f5;
+		font-size: 16px;
+		float: right;
+		padding: 5px;
+		margin-left: 10px;
+		margin-right: 10px;
+		margin-top: 10px;
+		text-decoration: none;
+		text-transform: capitalize;
+		text-align: center;
+		font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+		cursor: pointer;
+	}
 
 .current_selected {
 	border-bottom: 3px solid #f5f5f5;

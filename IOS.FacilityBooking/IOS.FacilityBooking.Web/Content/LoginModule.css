@@ -161,6 +161,39 @@ fieldset, form, label {
 	cursor: pointer;
 }
 
+.ui-state-error {
+	margin-top: 20px;
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	display: none;
+}
+
+.isloading-wrapper.isloading-right {
+	margin-left: 10px;
+}
+
+.isloading-overlay {
+	position: relative;
+	text-align: center;
+}
+
+	.isloading-overlay .isloading-wrapper {
+		background: #FFFFFF;
+		-webkit-border-radius: 7px;
+		-webkit-background-clip: padding-box;
+		-moz-border-radius: 7px;
+		-moz-background-clip: padding;
+		border-radius: 7px;
+		background-clip: padding-box;
+		display: inline-block;
+		margin: 0 auto;
+		padding: 10px 20px;
+		top: 10%;
+		z-index: 9000;
+	}
+
+
 /* Register Panel */
 
 #registerPanel {
@@ -330,6 +363,84 @@ fieldset, form, label {
 	cursor: pointer;
 }
 
+.errorMessage {
+	text-align: center;
+	background: #eee;
+	border: 1px solid #ccc;
+	padding: 5px;
+	border-radius: 8px;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	position: relative;
+	color: #ff4000;
+	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+	width: 400px;
+	height: 18px;
+	display: none;
+}
+
+.successMessage {
+	text-align: center;
+	background: #eee;
+	border: 1px solid #ccc;
+	padding: 5px;
+	border-radius: 8px;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	position: relative;
+	color: #ff4000;
+	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+	width: 30px;
+	height: 18px;
+	display: none;
+}
+
+/* arrows - :before and :after */
+.successMessage:before {
+	position: absolute;
+	display: inline-block;
+	border-top: 8px solid transparent;
+	border-right: 8px solid #eee;
+	border-bottom: 8px solid transparent;
+	border-right-color: rgba(0, 0, 0, 0.2);
+	left: -8px;
+	top: 7px;
+	content: '';
+}
+
+.successMessage:after {
+	position: absolute;
+	display: inline-block;
+	border-top: 7px solid transparent;
+	border-right: 7px solid #eee;
+	border-bottom: 7px solid transparent;
+	left: -6px;
+	top: 8px;
+	content: '';
+}
+
+/* arrows - :before and :after */
+.errorMessage:before {
+	position: absolute;
+	display: inline-block;
+	border-top: 8px solid transparent;
+	border-right: 8px solid #eee;
+	border-bottom: 8px solid transparent;
+	border-right-color: rgba(0, 0, 0, 0.2);
+	left: -8px;
+	top: 7px;
+	content: '';
+}
+
+.errorMessage:after {
+	position: absolute;
+	display: inline-block;
+	border-top: 7px solid transparent;
+	border-right: 7px solid #eee;
+	border-bottom: 7px solid transparent;
+	left: -6px;
+	top: 8px;
+	content: '';
+}
+
 /* Admin Selction Panel */
 
 .adminSelection_fullpage_container {
@@ -342,14 +453,14 @@ fieldset, form, label {
 	position: relative;
 	top: 35%;
 	margin: 0 auto;
-	width: 60%;
+	width: 1000px;
 	height: 200px;
 }
 
 .adminSelection_item a {
 	margin: 0 1%;
 	float: left;
-	width: 31%;
+	width: 300px;
 	text-align: center;
 	height: 125px;
 	background-color: #3BB9FF;
@@ -372,7 +483,7 @@ fieldset, form, label {
 .special_case {
 	margin: 0 1%;
 	float: left;
-	width: 31%;
+	width: 300px;
 	text-align: center;
 	height: 195px;
 	background-color: #3BB9FF;

@@ -4,6 +4,10 @@
 	$(".manageHotelMenu_container").height($(".body_container").height() - 70);
 });
 
+// Log Off
+$("#AdminLogOff").click(function () {
+	$("#logoutForm").submit();
+});
 
 // Menu
 

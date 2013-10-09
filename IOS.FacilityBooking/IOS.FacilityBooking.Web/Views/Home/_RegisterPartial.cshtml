@@ -17,42 +17,98 @@
 						</tr>
 						<tr>
 							<td>@Html.TextBoxFor(m => m.UserName, new { id = "username", autocomplete = "off", @class = "registerTextBox", placeholder = "eg. mysuperusername690" })</td>
+							<td class="form-alert">
+								<div class="errorMessage" id="errorUsername">
+									Invalid Username.
+								</div>
+								<div class="successMessage">
+									<div id="circle-1"></div>
+								</div>
+							</td>
 						</tr>
 						<tr>
 							<td class="registerTablelabel">@Html.LabelFor(m => m.Password)</td>
 						</tr>
 						<tr>
 							<td>@Html.PasswordFor(m => m.Password, new { id = "registerpassword", autocomplete = "off", @class = "registerTextBox", placeholder = "eg. X8df!90EO" })</td>
+							<td class="form-alert">
+								<div class="errorMessage" id="errorPassword">
+									Invalid Password - Must be 8 character or more.
+								</div>
+								<div class="successMessage">
+									<div id="circle-2"></div>
+								</div>
+							</td>
 						</tr>
 						<tr>
 							<td class="registerTablelabel">@Html.LabelFor(m => m.ConfirmPassword)</td>
 						</tr>
 						<tr>
 							<td>@Html.PasswordFor(m => m.ConfirmPassword, new { id = "registerconfirmpassword", autocomplete = "off", @class = "registerTextBox", placeholder = "eg. X8df!90EO" })</td>
+							<td class="form-alert">
+								<div class="errorMessage" id="errorPasswordConfirm">
+									Invalid Confirm Password - Does not match.
+								</div>
+								<div class="successMessage">
+									<div id="circle-3"></div>
+								</div>
+							</td>
 						</tr>
 						<tr>
 							<td class="registerTablelabel">@Html.LabelFor(m => m.Email)</td>
 						</tr>
 						<tr>
 							<td>@Html.TextBoxFor(m => m.Email, new { id = "email", autocomplete = "off", @class = "registerTextBox", placeholder = "eg. mysupermail@mail.com" })</td>
+							<td class="form-alert">
+								<div class="errorMessage" id="errorEmail">
+									Invalid Email Address.
+								</div>
+								<div class="successMessage">
+									<div id="circle-4"></div>
+								</div>
+							</td>
 						</tr>
 						<tr>
 							<td class="registerTablelabel">@Html.LabelFor(m => m.ConfirmEmailAddress)</td>
 						</tr>
 						<tr>
 							<td>@Html.TextBoxFor(m => m.ConfirmEmailAddress, new { id = "confirmemail", autocomplete = "off", @class = "registerTextBox", placeholder = "eg. mysupermail@mail.com" })</td>
+							<td class="form-alert">
+								<div class="errorMessage" id="errorEmailConfirm">
+									Invalid Confirm Email Address - Does not match.
+								</div>
+								<div class="successMessage">
+									<div id="circle-5"></div>
+								</div>
+							</td>
 						</tr>
 						<tr>
 							<td class="registerTablelabel">@Html.LabelFor(m => m.Address)</td>
 						</tr>
 						<tr>
 							<td>@Html.TextBoxFor(m => m.Address, new { id = "address", @class = "registerTextBox", autocomplete = "off", placeholder = "eg. 10 Super Road 8 #05-13 Singapore Post Centre Singapore 123456" })</td>
+							<td class="form-alert">
+								<div class="errorMessage" id="errorAddress">
+									Invalid Address.
+								</div>
+								<div class="successMessage">
+									<div id="circle-6"></div>
+								</div>
+							</td>
 						</tr>
 						<tr>
 							<td class="registerTablelabel">@Html.LabelFor(m => m.PhoneNumber)</td>
 						</tr>
 						<tr>
 							<td>@Html.TextBoxFor(m => m.PhoneNumber, new { id = "phonenumber", @class = "registerTextBox", autocomplete = "off", placeholder = "eg. 12345678" })</td>
+							<td class="form-alert">
+								<div class="errorMessage" id="errorPhoneNumber">
+									Invalid PhoneNumber.
+								</div>
+								<div class="successMessage">
+									<div id="circle-7"></div>
+								</div>
+							</td>
 						</tr>
 						<tr>
 							<td>@Html.CheckBoxFor(m => m.Agree, new { id = "registerAgree" })<label for="registerAgree" id="registerAgreeLabel">I have read and agreed to the <a id="showtermsNconditions">Terms and Conditions</a></label></td>

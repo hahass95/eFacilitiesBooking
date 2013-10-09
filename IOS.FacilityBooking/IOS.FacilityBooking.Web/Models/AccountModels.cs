@@ -88,7 +88,7 @@ namespace IOS.FacilityBooking.Web.Models
         public string ConfirmPassword { get; set; }
 
 		[Required]
-		[Display(Name = "Email")]
+		[Display(Name = "Email Address")]
 		public string Email { get; set; }
 
 		[Display(Name = "Confirm Email Address")]

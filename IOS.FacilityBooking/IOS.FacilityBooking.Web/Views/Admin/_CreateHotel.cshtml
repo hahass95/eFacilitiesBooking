@@ -5,11 +5,16 @@
 <div class="header">
 	<div class="header_container">
 		<div class="main_menu">
-			<ul>
-				<li class="menu_item" id="showCreateContainer">Create</li>
-				<li class="menu_item">Remove</li>
-				<li class="menu_item">Refresh</li>
-			</ul>
+			@using (Html.BeginForm("LogOff", "Account", new { area = "" }, FormMethod.Post, new { id = "logoutForm" }))
+			{
+				@Html.AntiForgeryToken()
+				<ul>
+					<li class="menu_item" id="showCreateContainer">Create<span class="icon-plus"></span></li>
+					<li class="menu_item">Remove<span class="icon-minus"></span></li>
+					<li class="menu_item">Refresh<span class="icon-refresh"></span></li>
+					<li class="menu_item_right" id="AdminLogOff">Log Off<span class="icon-lock"></span></li>
+				</ul>
+			}
 		</div>
 	</div>
 	<div class="createContainer">
